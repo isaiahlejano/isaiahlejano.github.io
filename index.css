@@ -1,0 +1,12 @@
+html, body{
+	scroll-behavior: smooth;
+	background: #222831;
+	color: #eeeeee;
+	font-family: 'Open Sans', Sans-Serif;
+}
+h1, h2, h3, h4, h5, h6{ font-family: 'Raleway', Sans-Serif; }
+header{
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+}
