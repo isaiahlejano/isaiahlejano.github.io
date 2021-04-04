@@ -60,6 +60,7 @@ header div.this__header_icon_wrapper img{
 
 main{
 	position: relative;
+	overflow: hidden;
 }
 main > section{
 	background: var(--main-background-color);
