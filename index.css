@@ -7,8 +7,6 @@
 	--main-content-color: #C5C6C8;
 	--sub-highlight-color: #66FCF1;
 	--sub-highlight-focus-color: #46A29F;
-
-	--transition-value: 0.2s linear;
 }
 
 html, body{
@@ -22,12 +20,12 @@ html, body{
 html, body, div, p, a, span{
 	color: var(--main-content-color);
 	text-decoration: none;
-	transition: color var(--transition-value);
+	transition: color 0.2s linear;
 }
 a:hover{
 	color: var(--sub-highlight-color);
 }
-header, main{
+header, main > section > div{
 	max-width: 80rem;
 	margin: 0 auto;
 }
@@ -47,8 +45,7 @@ header div.this__header_navigation_wrapper ul{
 	margin: 0;
 	padding: 0;
 }
-header div.this__header_navigation_wrapper ul li{
-	float: left;
+header div.this__header_navigation_wrapper ul li:not(:last-child){
 	padding-right: 1rem;
 }
 header div.this__header_navigation_wrapper ul li a{
@@ -59,6 +56,24 @@ header div.this__header_icon_wrapper{
 }
 header div.this__header_icon_wrapper img{
 	height: 5rem;
+}
+
+main{
+	position: relative;
+}
+main > section{
+	background: var(--main-background-color);
+}
+.this__tab_content{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+    transform: translate(100%, 0);
+    transition: transform 0.3s;
+}
+.this__tab_content[data-trigger-action=true]{
+    transform: translate(0, 0);
 }
 
 @media only screen and (min-width: 768px){
